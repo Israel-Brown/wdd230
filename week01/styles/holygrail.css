@@ -11,9 +11,8 @@ body {
   }
   
   nav {
-	width: 100vw;
-	height: 20%;
-	background-color: blueviolet;
+		background: blueviolet;
+    grid-column: 4 / 4;
   }
   
   main {
