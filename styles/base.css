@@ -1,0 +1,96 @@
+/* Base Styles (Mobile First) */
+
+/* Apply the Google Font */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #0077b6; /* Example color */
+    color: #fff;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+header span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0077b6;
+    font-weight: bold;
+}
+
+/* Main layout */
+main {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Card Layout */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card ul li {
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
