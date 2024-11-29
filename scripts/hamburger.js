@@ -1,16 +1,17 @@
-// Hamburger Menu Toggle
-const hamburger = document.getElementById('hamburger-btn');
-const menu = document.getElementById('nav-menu');
-hamburger.addEventListener('click', () => {
-    menu.classList.toggle('active');
-    hamburger.innerHTML = hamburger.innerHTML === '&#9776;' ? '&#10006;' : '&#9776;';
+// JavaScript for the Hamburger Menu Toggle
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const navMenu = document.getElementById('nav-menu');
+
+hamburgerBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    hamburgerBtn.innerHTML = navMenu.classList.contains('active') ? '✖' : '☰'; // Change to 'X' on close
 });
 
-// Dark Mode Toggle
+// JavaScript for Dark Mode Toggle
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const body = document.body;
 
 darkModeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
-    darkModeToggle.innerHTML = body.classList.contains('dark-mode') ? '🌞' : '🌙';
+    darkModeToggle.textContent = body.classList.contains('dark-mode') ? '🌙' : '🌞'; // Change icon on toggle
 });

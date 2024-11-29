@@ -5,7 +5,9 @@
     box-sizing: border-box;
 }
 
-/* Base Styles (Mobile First) */
+html {
+    font-size: 100%; /* Base font size */
+}
 
 /* Apply the Google Font */
 body {
@@ -111,7 +113,7 @@ h1 {
 /* Footer Styling */
 footer {
     background-color: #0077b6;
-    color: blue;
+    color: white;
     text-align: center;
     padding: 20px 0;
 }
