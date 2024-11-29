@@ -1,3 +1,10 @@
+/* Normalize or Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Base Styles (Mobile First) */
 
 /* Apply the Google Font */
@@ -7,9 +14,10 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Header styling */
+/* Header Styling */
 header {
     display: flex;
     align-items: center;
@@ -31,6 +39,23 @@ header span {
     font-weight: bold;
 }
 
+/* Dark Mode Button */
+#dark-mode-toggle {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
 /* Navigation */
 nav ul {
     list-style-type: none;
@@ -47,7 +72,7 @@ nav a {
     font-weight: bold;
 }
 
-/* Main layout */
+/* Main Layout */
 main {
     width: 100%;
     padding: 20px;
@@ -83,7 +108,7 @@ h1 {
     margin: 5px 0;
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
     background-color: #0077b6;
     color: white;
@@ -93,4 +118,43 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive Menu Styling */
+@media (max-width: 600px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #f4f4f4;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
