@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chamber of Commerce</title>
   <meta name="description" content="Welcome to the Chamber of Commerce. Join us to connect and grow!">
-  <link rel="icon" href="/chamber/images/favicon.ico" type="image/x-icon">
+  <title>Chamber of Commerce</title>
+
   <meta property="og:title" content="Chamber of Commerce">
   <meta property="og:type" content="website">
   <meta property="og:image" content="/chamber/images/og-image.jpg">
-  <meta property="og:url" content="https://yourwebsite.com/chamber">
-  <link rel="stylesheet" href="/chamber/styles/normalize.css">
+  <meta property="og:url" content="https://israel-brown.github.io/wdd230/chamber/">
+
+  <link rel="icon" href="/chamber/images/favicon.ico" type="image/x-icon">
+
   <link rel="stylesheet" href="/chamber/styles/base.css">
-  <script src="/chamber/scripts/script.js" defer></script>
 </head>
+
 <body>
   <header>
     <h1>Chamber of Commerce</h1>
@@ -28,30 +30,36 @@
       </ul>
     </nav>
   </header>
+
   <main>
     <section id="hero">
-      <img src="/chamber/images/hero.jpg" alt="Welcome to our Chamber">
+      <img src="/chamber/images/hero.jpg" alt="Welcome to our Chamber" />
       <h2>Join the Chamber of Commerce</h2>
       <a href="/chamber/join.html" class="cta">Join Now</a>
     </section>
+
     <section id="current-events">
       <h2>Current Events</h2>
       <p>Details about upcoming events.</p>
     </section>
+
     <section id="weather">
       <h2>Weather</h2>
       <div id="weather-card">Weather details go here.</div>
     </section>
+
     <section id="spotlights">
       <h2>Business Spotlights</h2>
       <div class="spotlight">Business 1 details.</div>
       <div class="spotlight">Business 2 details.</div>
     </section>
   </main>
+
   <footer>
     <p>Contact us at info@chamber.com</p>
     <p>Israel Brown | WDD 230 Project | Last Modified: <span id="last-modified"></span></p>
   </footer>
+
   <script>
     document.getElementById('last-modified').textContent = document.lastModified;
   </script>
