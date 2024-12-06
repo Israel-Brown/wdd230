@@ -4,20 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Israel Brown - WDD 230 - Web Frontend Development</title>
-    <meta name="description" content="WDD 230 - Web Frontend Development course by Israel Brown. Learn frontend web development concepts and assignments in this course assignment portal.">
+    <meta name="description" content="Discover local events, demographics, and attractions.">
     <meta name="author" content="Israel Brown">
-    <!-- Social Media Meta Tags -->
-    <meta property="og:title" content="Israel Brown - WDD 230 - Web Frontend Development">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://sandee.com/_next/image?url=http%3A%2F%2Ft0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcTPk8LZ9PL0b2nL9Briu6ibRndVo63vZmMUXjjvr5r7IwtNz7b1&w=640&q=75">
-    <meta property="og:url" content="https://israel-brown.github.io/wdd230/">
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@YourTwitterHandle">
-    <meta name="twitter:title" content="Israel Brown - WDD 230 - Web Frontend Development">
-    <meta name="twitter:description" content="Explore the WDD 230 Web Frontend Development course by Israel Brown.">
-    <meta name="twitter:image" content="https://sandee.com/_next/image?url=http%3A%2F%2Ft0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcTPk8LZ9PL0b2nL9Briu6ibRndVo63vZmMUXjjvr5r7IwtNz7b1&w=640&q=75">
-
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="icon" href="favicon.ico">
@@ -42,8 +30,8 @@
 
 <main>
     <h1>Chamber Discover Page</h1>
-    
-    <!-- Sidebar Layout with Demographics, Events, and Other Information -->
+
+    <!-- Sidebar Layout -->
     <div class="sidebar">
         <h3>Welcome Message</h3>
         <p id="visit-message">Loading...</p>
@@ -85,12 +73,11 @@
 <script src="scripts/getDates.js"></script>
 <script src="scripts/hamburger.js"></script>
 <script>
-// Page Visit Counter
+// Visit Tracking
 const visitMessage = document.getElementById('visit-message');
 const lastVisit = localStorage.getItem('lastVisit');
 const currentDate = Date.now();
 
-// Check if it's the user's first visit
 if (!lastVisit) {
     visitMessage.textContent = "Welcome! Let us know if you have any questions.";
 } else {
@@ -102,10 +89,8 @@ if (!lastVisit) {
     }
 }
 
-// Store current visit time
 localStorage.setItem('lastVisit', currentDate);
 
-// Display current year and last modified date
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = "Last Modified: " + document.lastModified;
 </script>
