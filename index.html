@@ -24,46 +24,76 @@
 </head>
 <body>
 
-    <header>
-        <img src="images/1.jpg" alt="Profile Image" class="profile-img">
-        <span>Israel Brown</span>
-        <button id="dark-mode-toggle">🌙</button>
-    </header>
+<header>
+    <img src="images/1.webp" alt="Profile Image" class="profile-img">
+    <span>Israel Brown</span>
+    <button id="dark-mode-toggle">🌙</button>
+</header>
 
-    <nav>
-        <button class="hamburger" id="hamburger-btn">&#9776;</button>
-        <ul id="nav-menu" class="menu">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Chamber</a></li>
-            <li><a href="#">Site Plan</a></li>
-            <li><a href="#">Form</a></li>
+<nav>
+    <button class="hamburger" id="hamburger-btn">&#9776;</button>
+    <ul id="nav-menu" class="menu">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Chamber</a></li>
+        <li><a href="#">Site Plan</a></li>
+        <li><a href="#">Form</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h1>WDD 230: Web Frontend Development</h1>
+    
+    <!-- Hero Image -->
+    <section class="hero">
+        <picture>
+            <source media="(max-width: 600px)" srcset="images/temple-mobile.webp">
+            <source media="(min-width: 601px)" srcset="images/temple-desktop.webp">
+            <img src="images/temple-desktop.webp" alt="Latter-day Temple" class="hero-img">
+        </picture>
+        <div class="overlay">
+            <h2>Latter-day Temple</h2>
+        </div>
+    </section>
+    
+    <section class="card">
+        <h2>Learning Activities</h2>
+        <ul>
+            <li><a href="#">Activity 1</a></li>
+            <li><a href="#">Activity 2</a></li>
+            <li><a href="#">Activity 3</a></li>
         </ul>
-    </nav>
+    </section>
+    <section class="card">
+        <h2>Information</h2>
+        <p>Weather: TBD</p>
+        <p>Visits: <span id="visit-counter">0</span></p>
+    </section>
+</main>
 
-    <main>
-        <h1>WDD 230: Web Frontend Development</h1>
-        <section class="card">
-            <h2>Learning Activities</h2>
-            <ul>
-                <li><a href="#">Activity 1</a></li>
-                <li><a href="#">Activity 2</a></li>
-                <li><a href="#">Activity 3</a></li>
-            </ul>
-        </section>
-        <section class="card">
-            <h2>Information</h2>
-            <p>Weather: TBD</p>
-            <p>Visits: TBD</p>
-        </section>
-    </main>
+<section class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Israel Brown - Jamaica</p>
-        <p id="lastModified"></p>
-    </footer>
+<footer>
+    <p>&copy; <span id="year"></span> Israel Brown - Jamaica</p>
+    <p id="lastModified"></p>
+</footer>
 
-    <script src="scripts/getDates.js"></script>
-    <script src="scripts/hamburger.js"></script>
+<script src="scripts/getDates.js"></script>
+<script src="scripts/hamburger.js"></script>
+<script>
+    // Page Visit Counter
+    let visitCount = localStorage.getItem('visitCount') || 0;
+    visitCount++;
+    localStorage.setItem('visitCount', visitCount);
+    document.getElementById('visit-counter').textContent = visitCount;
+
+    // Display current year in the footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Display last modified date
+    document.getElementById('lastModified').textContent = "Last Modified: " + document.lastModified;
+</script>
 
 </body>
 </html>
