@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+
+<header>
+    <img src="images/1.webp" alt="Profile Image" class="profile-img">
+    <span>Israel Brown</span>
+    <button id="dark-mode-toggle">🌙</button>
+</header>
+
+<nav>
+    <button class="hamburger" id="hamburger-btn">&#9776;</button>
+    <ul id="nav-menu" class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="#">Site Plan</a></li>
+        <li><a href="join.html" class="active">Join</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h1>Join the Chamber of Commerce</h1>
+    <form action="thankyou.html" method="get">
+        <label for="firstName">First Name:
+            <input type="text" id="firstName" name="firstName" required>
+        </label>
+
+        <label for="lastName">Last Name:
+            <input type="text" id="lastName" name="lastName" required>
+        </label>
+
+        <label for="title">Title/Position:
+            <input type="text" id="title" name="title" pattern="[a-zA-Z\s-]{7,}" placeholder="e.g., Marketing Manager">
+        </label>
+
+        <label for="email">Email:
+            <input type="email" id="email" name="email" required placeholder="example@email.com">
+        </label>
+
+        <label for="phone">Mobile Phone:
+            <input type="tel" id="phone" name="phone" required>
+        </label>
+
+        <label for="organization">Organization Name:
+            <input type="text" id="organization" name="organization" required>
+        </label>
+
+        <label for="membership">Membership Level:
+            <select id="membership" name="membership" required>
+                <option value="NP">NP Membership (Free for non-profits)</option>
+                <option value="Bronze">Bronze Membership</option>
+                <option value="Silver">Silver Membership</option>
+                <option value="Gold">Gold Membership</option>
+            </select>
+        </label>
+
+        <label for="description">Business/Organization Description:
+            <textarea id="description" name="description" rows="5" placeholder="Describe your business..."></textarea>
+        </label>
+
+        <input type="hidden" id="timestamp" name="timestamp" value="">
+        <button type="submit">Submit</button>
+    </form>
+
+    <aside>
+        <h2>Membership Benefits</h2>
+        <ul>
+            <li><strong>NP Membership:</strong> Access to networking events.</li>
+            <li><strong>Bronze Membership:</strong> Event discounts and basic advertising.</li>
+            <li><strong>Silver Membership:</strong> Premium advertising and training.</li>
+            <li><strong>Gold Membership:</strong> Spotlight advertising and VIP event access.</li>
+        </ul>
+    </aside>
+</main>
+
+<footer>
+    <p>&copy; <span id="year"></span> Israel Brown - Jamaica</p>
+    <p id="lastModified"></p>
+</footer>
+
+<script src="scripts/getDates.js"></script>
+<script>
+    document.getElementById('timestamp').value = new Date().toISOString();
+</script>
+
+</body>
+</html>
